@@ -1,0 +1,111 @@
+#background{
+    margin: 2px;
+    background-color: rgba(0,0,0,0.05);
+    text-align:center;
+}
+
+.bg-img{
+background:url("../pic/heatmap-cartesian.png")
+}
+
+#upload{
+    position: absolute;
+    width:100%;
+    height: 10%;
+    margin-top: 8%;
+    /*居中分布*/
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn_container{
+    position: absolute;
+    width:100%;
+    height: 88%;
+    top: 8%;
+    /*居中分布*/
+    text-align:center;
+    flex-direction: column;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.usual_btn {
+    margin-top: 15px;
+    width: 80%;
+    height: 6%;
+    background-color: #e3dfdf;
+    color: #1d0404;
+    vertical-align: bottom;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#analysis {
+    width: 80%;
+    height: 60%;
+    background-color: #e3dfdf;
+    color: #1d0404;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    margin-top: 15px;
+    width: 100%;
+    height: 10%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#title {
+    position:absolute;
+    width:40%;
+    height:10%;
+    top:0;
+    left: 30%;
+    color: #36373b;
+    font-weight: bolder;
+    font-size: 34px;
+    font-family: "NSimSun";
+    /*居中分布*/
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#author{
+    position:absolute;
+    height:10%;
+    top:0;
+    left: 80%;
+    right: 0;
+    color: rgb(61, 58, 53);
+    font-size: 12px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#left{
+    position:absolute;
+    width:22%;
+    height:90%;
+    top:10%;
+    left: 2px;
+    background-color: rgba(50,50,50,0.2);
+}
+
+#right{
+    position:absolute;
+    height:90%;
+    top:10%;
+    left:22.8%;
+    right:3px;
+    background-color:black;
+}

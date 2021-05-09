@@ -1,0 +1,33 @@
+#back{
+    margin: 2px;
+    background-color: rgb(255, 255, 255);
+    text-align:center;
+    flex-direction: column;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#up{
+    position:absolute;
+    width:99%;
+    height:44%;
+    top:10%;
+    left: 2px;
+    right: 2px;
+    border-color: #36373b;
+    border-style: solid;
+    background-color:rgba(5, 5, 5, 0.05);
+}
+
+#down{
+    position:absolute;
+    width:99%;
+    height:45%;
+    top: 55%;
+    left: 2px;
+    right: 2px;
+    border-color: #36373b;
+    border-style: solid;
+    background-color: rgba(5, 5, 5, 0.05);
+}

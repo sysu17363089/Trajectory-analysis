@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户轨迹分析</title>
+    <link href="../static/css/main.css" rel="stylesheet"/>
+    <script src="../static/js/echarts.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=0UqXGL98FSmi22w2Rl6HK56I"></script>
+    <script src="../static/js/bmap.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../static/js/mapStyle.js"></script>
+    <script src="../static/js/controller.js"></script>
+    {{ dropzone.load_css() }}
+    {{ dropzone.style('dashed #0087F7; margin: 5px; height: 400px; min-width: 800px; overflow-y: scroll') }}
+
+</head>
+<body id="background">
+    <div id="title">用户轨迹分析系统</div>
+    <div id="author">
+        Author: 杨梦雨<br>
+        Email: yangmengyu36@mail2.sysu.edu.cn
+    </div>
+
+    <div id="left">
+        <div id="upload">
+            <button class="btn badge-danger btn-lg" data-toggle="modal" data-target="#myModal">
+        上传轨迹文件
+            </button>
+        </div>
+        <div id="btn_container">
+            <button id="traj_cluster" class="usual_btn">轨迹聚类</button>
+            <button id="stop_points" class="usual_btn">停留点生成</button>
+            <button id="POI" class="usual_btn">用户兴趣区域分析</button>
+            <button id="toSemantic" class="usual_btn">用户语义轨迹生成</button>
+        </div>
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width: 900px; height: 500px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">轨迹文件上传</h4>
+            </div>
+            <div class="modal-body">
+                {{ dropzone.create(action='index') }}
+                {{ dropzone.load_js() }}
+                {{ dropzone.config() }}
+            </div>
+            <div class="modal-footer">
+                <button id="confirm" type="button" class="btn btn-primary" data-dismiss="modal">提交</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+    </div>
+    </div>
+    <div id="right"></div>
+
+</body>
+</html>
