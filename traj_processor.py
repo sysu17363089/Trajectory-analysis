@@ -60,10 +60,10 @@ class HandledFilesProcessor:
 
     def get_stop_points(self):
         if self.stop_points is None:
-            # self.stop_points = get_stop_points(self.df_container)
-            self.stop_points = pd.read_csv('stop_points.csv',
-                                           converters={'start_time': parse_dates, 'end_time': parse_dates})
-        # whole_df = create_whole_df(self.stop_points)
+            self.stop_points = get_stop_points(self.df_container)
+            # self.stop_points = pd.read_csv('stop_points.csv',
+            #                                converters={'start_time': parse_dates, 'end_time': parse_dates})
+        whole_df = create_whole_df(self.stop_points)
         print(self.stop_points)
         whole_df = self.stop_points
         coors = [[whole_df['Longitude'][i], whole_df['Latitude'][i]] for i in range(len(whole_df))]
@@ -71,10 +71,10 @@ class HandledFilesProcessor:
 
     def generate_POI(self):
         if self.stop_points is None:
-            # self.stop_points = get_stop_points(self.df_container)
-            self.stop_points = pd.read_csv('stop_points.csv',
-                                           converters={'start_time': parse_dates, 'end_time': parse_dates})
-        # whole_df = create_whole_df(self.stop_points)
+            self.stop_points = get_stop_points(self.df_container)
+            # self.stop_points = pd.read_csv('stop_points.csv',
+            #                                converters={'start_time': parse_dates, 'end_time': parse_dates})
+        whole_df = create_whole_df(self.stop_points)
         whole_df = self.stop_points
         clusters = create_cluster(whole_df, eps=0.10, min_samples=3)
         poi = get_true_cluster(whole_df, clusters)
